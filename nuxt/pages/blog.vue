@@ -4,15 +4,15 @@
       <span>Love Stories</span>
     </div>
     <div class="blog-parent">
-      <div v-for="item in fileList" :key="item.id" class="blog-wrap">
+      <div v-for="item in blogList" :key="item.id" class="blog-wrap">
         <img :src="item.imgUrl" class="blog-img">
         <div class="blog-wrap-text">
-          <time class="blog-date">{{ item.createdAt }}</time>
+          <time class="blog-date">{{ item.createdTime }}</time>
           <NuxtLink
             :to="'blogItem?id=' + item.id"
             class="blog-title"
           >
-            {{ item.title }}
+            {{ item.blogTitle }}
           </NuxtLink>
           <NuxtLink to="/" class="blog-readMore">Read More</NuxtLink>
         </div>
